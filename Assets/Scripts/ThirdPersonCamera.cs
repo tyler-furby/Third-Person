@@ -5,64 +5,138 @@ using UnityEngine;
 public class ThirdPersonCamera : MonoBehaviour {
 		
 	public Transform target;        //an Object to lock on to
-	public float damping = 6.0f;    //to control the rotation 
-	public bool smooth = true;
-	public float minDistance = 10.0f;    //How far the target is from the camera
-	public string property = "";
 
-	private Color color;
-	private float alpha = 1.0f;
-	private Transform _myTransform;
+	private Vector3 offset;
 
-	void Awake() {
-		_myTransform = transform;
+	public enum RotationAxes { MouseXAndY = 0, MouseX = 1, MouseY = 2 }
+	public RotationAxes axes = RotationAxes.MouseXAndY;
+	public float sensitivityX = 15F;
+	public float sensitivityY = 15F;
+
+	public float minimumX = -360F;
+	public float maximumX = 360F;
+
+	public float minimumY = -60F;
+	public float maximumY = 60F;
+
+	float rotationX = 0F;
+	float rotationY = 0F;
+
+	private List<float> rotArrayX = new List<float>();
+	float rotAverageX = 0F;	
+
+	private List<float> rotArrayY = new List<float>();
+	float rotAverageY = 0F;
+
+	public float frameCounter = 20;
+
+	Quaternion originalRotation;
+
+	public static float ClampAngle (float angle, float min, float max)
+	{
+		angle = angle % 360;
+		if ((angle >= -360F) && (angle <= 360F)) {
+			if (angle < -360F) {
+				angle += 360F;
+			}
+			if (angle > 360F) {
+				angle -= 360F;
+			}			
+		}
+		return Mathf.Clamp (angle, min, max);
 	}
 
 	// Use this for initialization
 	void Start () {
-		//        if(renderer.material.HasProperty(property)) {
-		//            color = renderer.material.GetColor(property);
-		//        }
-		//        else {
-		//            property = "";
-		//        }
-		//        if(rigidbody) {
-		//            rigidbody.freezeRotation = true;
-		//        }
-
+		Rigidbody rb = GetComponent<Rigidbody>();	
+		if (rb)
+			rb.freezeRotation = true;
+		originalRotation = transform.localRotation;
+		offset = transform.position - target.transform.position;
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		if (axes == RotationAxes.MouseXAndY)
+		{			
+			rotAverageY = 0f;
+			rotAverageX = 0f;
 
+			rotationY += Input.GetAxis("Mouse Y") * sensitivityY;
+			rotationX += Input.GetAxis("Mouse X") * sensitivityX;
+
+			rotArrayY.Add(rotationY);
+			rotArrayX.Add(rotationX);
+
+			if (rotArrayY.Count >= frameCounter) {
+				rotArrayY.RemoveAt(0);
+			}
+			if (rotArrayX.Count >= frameCounter) {
+				rotArrayX.RemoveAt(0);
+			}
+
+			for(int j = 0; j < rotArrayY.Count; j++) {
+				rotAverageY += rotArrayY[j];
+			}
+			for(int i = 0; i < rotArrayX.Count; i++) {
+				rotAverageX += rotArrayX[i];
+			}
+
+			rotAverageY /= rotArrayY.Count;
+			rotAverageX /= rotArrayX.Count;
+
+			rotAverageY = ClampAngle (rotAverageY, minimumY, maximumY);
+			rotAverageX = ClampAngle (rotAverageX, minimumX, maximumX);
+
+			Quaternion yQuaternion = Quaternion.AngleAxis (rotAverageY, Vector3.left);
+			Quaternion xQuaternion = Quaternion.AngleAxis (rotAverageX, Vector3.up);
+
+			transform.localRotation = originalRotation * xQuaternion * yQuaternion;
+		}
+		else if (axes == RotationAxes.MouseX)
+		{			
+			rotAverageX = 0f;
+
+			rotationX += Input.GetAxis("Mouse X") * sensitivityX;
+
+			rotArrayX.Add(rotationX);
+
+			if (rotArrayX.Count >= frameCounter) {
+				rotArrayX.RemoveAt(0);
+			}
+			for(int i = 0; i < rotArrayX.Count; i++) {
+				rotAverageX += rotArrayX[i];
+			}
+			rotAverageX /= rotArrayX.Count;
+
+			rotAverageX = ClampAngle (rotAverageX, minimumX, maximumX);
+
+			Quaternion xQuaternion = Quaternion.AngleAxis (rotAverageX, Vector3.up);
+			transform.localRotation = originalRotation * xQuaternion;			
+		}
+		else
+		{			
+			rotAverageY = 0f;
+
+			rotationY += Input.GetAxis("Mouse Y") * sensitivityY;
+
+			rotArrayY.Add(rotationY);
+
+			if (rotArrayY.Count >= frameCounter) {
+				rotArrayY.RemoveAt(0);
+			}
+			for(int j = 0; j < rotArrayY.Count; j++) {
+				rotAverageY += rotArrayY[j];
+			}
+			rotAverageY /= rotArrayY.Count;
+
+			rotAverageY = ClampAngle (rotAverageY, minimumY, maximumY);
+
+			Quaternion yQuaternion = Quaternion.AngleAxis (rotAverageY, Vector3.left);
+			transform.localRotation = originalRotation * yQuaternion;
+		}
 	}
 	void LateUpdate() {
-		if(target) {
-			if(smooth) {
-
-				//Look at and dampen the rotation
-				Quaternion rotation = Quaternion.LookRotation(target.position - _myTransform.position);
-				_myTransform.rotation = Quaternion.Slerp(_myTransform.rotation, rotation, Time.deltaTime * damping);
-			}
-			else { //Just look at
-				_myTransform.rotation = Quaternion.FromToRotation(-Vector3.forward, (new Vector3(target.position.x, target.position.y, target.position.z) - _myTransform.position).normalized);
-
-				float distance = Vector3.Distance(target.position, _myTransform.position);
-
-				if(distance < minDistance) {
-					alpha = Mathf.Lerp(alpha, 0.0f, Time.deltaTime * 2.0f);
-				}
-				else {
-					alpha = Mathf.Lerp(alpha, 1.0f, Time.deltaTime * 2.0f);
-
-				}
-				//                if(!string.IsNullOrEmpty(property)) {
-				//                    color.a = Mathf.Clamp(alpha, 0.0f, 1.0f);
-
-				//                    renderer.material.SetColor(property, color);
-
-				//                }
-			}
-		}
+				transform.position = target.transform.position + offset;
 	}
 }

@@ -17,10 +17,7 @@ public class MCSBlendshapeController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void OnTriggerEnter (Collider other) {
-		if (other.CompareTag("Wall")) {
-			count++;
-			m_CharacterManager.SetBlendshapeValue ("FBMHeavy", count * (100.0f / 12));
+	
 	}
-}
 
 }

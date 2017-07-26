@@ -51,6 +51,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\CameraConfinment\Demo\CameraBoundsDemoPlayer.cs" />
+     <Compile Include="Assets\CameraConfinment\Scripts\ConfineToCamera.cs" />
+     <Compile Include="Assets\Huge Mocap Library\demo\scripts\demo.cs" />
+     <Compile Include="Assets\Huge Mocap Library\demo\scripts\smoothFollow.cs" />
      <Compile Include="Assets\MORPH3D\Vendor\Unity\Shaders\Hair\HairRenderer.cs" />
      <Compile Include="Assets\MORPH3D\Vendor\Unity\Shaders\UniqueShadow\UniqueShadow.cs" />
      <Compile Include="Assets\MORPH3D\Vendor\Unity\Shaders\UniqueShadow\UniqueShadowSun.cs" />
@@ -58,12 +62,18 @@
      <Compile Include="Assets\Scripts\MCSBlendshapeController.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\ThirdPersonCamera.cs" />
+     <Compile Include="Assets\TornadoBanditsStudio\Low Poly Free Pack\Scripts\TBS_CameraMovement.cs" />
+     <Compile Include="Assets\TornadoBanditsStudio\Low Poly Free Pack\Water\TBS_Water.cs" />
      <None Include="Assets\MORPH3D\Vendor\Unity\Shaders\Standard\StandardSpecular-doublesided.shader" />
+     <None Include="Assets\Huge Mocap Library\READTHIS.txt" />
      <None Include="Assets\MORPH3D\Vendor\Unity\Shaders\Hair\Hair_Universal.shader" />
      <None Include="Assets\MORPH3D\Vendor\Unity\Shaders\Skin\Volund_UnityStandardCore.cginc" />
      <None Include="Assets\MORPH3D\Vendor\Unity\Shaders\UniqueShadow\UniqueShadow_ShadowSample.cginc" />
      <None Include="Assets\MORPH3D\Vendor\Unity\Shaders\Hair\Hair_UnityStandardInput.cginc" />
+     <None Include="Assets\CameraConfinment\Demo\World.shader" />
+     <None Include="Assets\Huge Mocap Library\mocap animations\cmu-mocap-index-text.txt" />
      <None Include="Assets\MORPH3D\Resources\Shaders\AlphaCombiner.shader" />
+     <None Include="Assets\CameraConfinment\Licence.txt" />
      <None Include="Assets\MORPH3D\Vendor\Unity\Shaders\Standard\Standard-doublesided.shader" />
      <None Include="Assets\MORPH3D\README.txt" />
      <None Include="Assets\MORPH3D\Vendor\Unity\Shaders\Standard\Standard-2pass-doublesided-half depth.shader" />

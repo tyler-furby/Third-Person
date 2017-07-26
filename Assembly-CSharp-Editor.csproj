@@ -51,6 +51,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\CameraConfinment\Editor\CameraConfinmentEditor.cs" />
      <Compile Include="Assets\MORPH3D\Scripts\Editor\CIClothingEditor.cs" />
      <Compile Include="Assets\MORPH3D\Scripts\Editor\M3DCharacterManagerEditor.cs" />
      <Compile Include="Assets\MORPH3D\Scripts\Editor\M3DMorphEditor.cs" />
@@ -61,12 +62,18 @@
      <Compile Include="Assets\MORPH3D\Scripts\Editor\SearchableWindow.cs" />
      <Compile Include="Assets\MORPH3D\Vendor\Unity\Shaders\Hair\Editor\HairShaderGUI.cs" />
      <Compile Include="Assets\MORPH3D\Vendor\Unity\Shaders\Skin\Editor\VolundMultiStandardShaderGUI.cs" />
+     <Compile Include="Assets\TornadoBanditsStudio\Editor\TBS_EditorInitializer.cs" />
+     <Compile Include="Assets\TornadoBanditsStudio\Editor\TBS_PresentationWindow.cs" />
      <None Include="Assets\MORPH3D\Vendor\Unity\Shaders\Standard\StandardSpecular-doublesided.shader" />
+     <None Include="Assets\Huge Mocap Library\READTHIS.txt" />
      <None Include="Assets\MORPH3D\Vendor\Unity\Shaders\Hair\Hair_Universal.shader" />
      <None Include="Assets\MORPH3D\Vendor\Unity\Shaders\Skin\Volund_UnityStandardCore.cginc" />
      <None Include="Assets\MORPH3D\Vendor\Unity\Shaders\UniqueShadow\UniqueShadow_ShadowSample.cginc" />
      <None Include="Assets\MORPH3D\Vendor\Unity\Shaders\Hair\Hair_UnityStandardInput.cginc" />
+     <None Include="Assets\CameraConfinment\Demo\World.shader" />
+     <None Include="Assets\Huge Mocap Library\mocap animations\cmu-mocap-index-text.txt" />
      <None Include="Assets\MORPH3D\Resources\Shaders\AlphaCombiner.shader" />
+     <None Include="Assets\CameraConfinment\Licence.txt" />
      <None Include="Assets\MORPH3D\Vendor\Unity\Shaders\Standard\Standard-doublesided.shader" />
      <None Include="Assets\MORPH3D\README.txt" />
      <None Include="Assets\MORPH3D\Vendor\Unity\Shaders\Standard\Standard-2pass-doublesided-half depth.shader" />
