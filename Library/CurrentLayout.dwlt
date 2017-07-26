@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 950, y: 521}
+  m_MinSize: {x: 950, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -43,7 +43,7 @@ MonoBehaviour:
     y: 0
     width: 2560
     height: 1392
-  m_MinSize: {x: 950, y: 521}
+  m_MinSize: {x: 950, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &3
 MonoBehaviour:
@@ -106,10 +106,10 @@ MonoBehaviour:
     y: 30
     width: 2560
     height: 1342
-  m_MinSize: {x: 679, y: 471}
-  m_MaxSize: {x: 14000, y: 14021}
+  m_MinSize: {x: 681, y: 492}
+  m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
-  controlID: 9738
+  controlID: 5518
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -130,10 +130,10 @@ MonoBehaviour:
     y: 0
     width: 2068
     height: 1342
-  m_MinSize: {x: 404, y: 471}
-  m_MaxSize: {x: 10000, y: 14021}
+  m_MinSize: {x: 404, y: 492}
+  m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 9739
+  controlID: 5519
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -157,7 +157,7 @@ MonoBehaviour:
   m_MinSize: {x: 404, y: 221}
   m_MaxSize: {x: 8004, y: 4021}
   vertical: 0
-  controlID: 9740
+  controlID: 5520
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -367,9 +367,9 @@ MonoBehaviour:
     height: 789
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 
-    m_LastClickedID: 0
-    m_ExpandedIDs: 1afcffff00000000444c0000b04d0000ba4e00004c4f0000
+    m_SelectedIDs: 32540000
+    m_LastClickedID: 21554
+    m_ExpandedIDs: dc14ffffe414ffffe814ffff1afcffff0000000032540000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -453,9 +453,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0.021881254, y: 0.9704121, z: -0.09638652, w: 0.22029793}
   m_Size:
-    m_Target: 7.478447
+    m_Target: 9.578448
     speed: 2
-    m_Value: 7.478447
+    m_Value: 9.578448
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -580,19 +580,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/MORPH3D/Content/Shinjuku_Outfit/ShortPonytailHair
+    - Assets/MORPH3D/Content/Cyria/CyriaSuit
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/MORPH3D/Content/Shinjuku_Outfit/ShortPonytailHair
+  - Assets/MORPH3D/Content/Cyria/CyriaSuit
   m_LastFoldersGridSize: -1
   m_LastProjectPath: /Users/tylerfurby/Documents/GitHub/Third Person
   m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 537.9922}
-    m_SelectedIDs: 22310000
-    m_LastClickedID: 12578
-    m_ExpandedIDs: 000000007426000052270000d22700004a29000092290000ee2900001e2b00004e2b0000862c0000d02c0000f02e0000b22f0000183100002a32000078320000583400006236000078390000da390000063a0000e03b0000043f000090420000b0420000e2430000f243000048440000a044000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 74.04297}
+    m_SelectedIDs: 44310000
+    m_LastClickedID: 12612
+    m_ExpandedIDs: 000000007426000052270000d22700004a29000092290000ee2900001e2b0000862c0000d02c0000183100002a32000078320000583400006236000078390000da390000063a0000e03b0000043f0000a841000090420000b0420000f243000048440000a044000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -620,7 +620,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000007426000052270000d22700004a29000092290000ee2900001e2b00004e2b0000862c0000d02c0000f02e0000b22f0000183100002a32000078320000583400006236000078390000da390000063a0000e03b0000043f000090420000b0420000e2430000f243000048440000a044000000ca9a3bffffff7f
+    m_ExpandedIDs: 000000007426000052270000d22700004a29000092290000ee2900001e2b0000862c0000d02c0000183100002a32000078320000583400006236000078390000da390000063a0000e03b0000043f0000a841000090420000b0420000f243000048440000a044000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

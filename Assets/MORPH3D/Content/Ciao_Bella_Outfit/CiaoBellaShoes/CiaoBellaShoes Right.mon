@@ -110,7 +110,7 @@
           "persistent": null,
           "cap": null,
           "assigned_materials": [
-            "7e4e4110-056d-4ee4-b958-c87803a2db31"
+            "eaed1e33-39bf-4c4b-8e69-24e1289f8a07"
           ],
           "alpha_masks": [
             "./AlphaInjection/M3DFemale_LOD0-CiaoBellaShoes_31740_right_LOD0-Body_LOD0-occlusion.png"
@@ -184,7 +184,7 @@
           "persistent": null,
           "cap": null,
           "assigned_materials": [
-            "7e4e4110-056d-4ee4-b958-c87803a2db31"
+            "ca2450c3-cabe-45a0-aed2-1b62dbac7e89"
           ],
           "alpha_masks": [
             "./AlphaInjection/M3DFemale_LOD1-CiaoBellaShoes_31740_right_LOD1-Body_LOD1-occlusion.png"
@@ -258,7 +258,7 @@
           "persistent": null,
           "cap": null,
           "assigned_materials": [
-            "7e4e4110-056d-4ee4-b958-c87803a2db31"
+            "48fcd432-5842-4aea-80a0-32f4259f1572"
           ],
           "alpha_masks": [
             "./AlphaInjection/M3DFemale_LOD2-CiaoBellaShoes_31740_right_LOD2-Body_LOD2-occlusion.png"
@@ -332,7 +332,7 @@
           "persistent": null,
           "cap": null,
           "assigned_materials": [
-            "7e4e4110-056d-4ee4-b958-c87803a2db31"
+            "fb4ac21f-b4c2-4ea5-9b52-6be9d745dfd8"
           ],
           "alpha_masks": [
             "./AlphaInjection/M3DFemale_LOD3-CiaoBellaShoes_31740_right_LOD3-Body_LOD3-occlusion.png"
